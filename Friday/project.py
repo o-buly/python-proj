@@ -11,7 +11,7 @@ import sys
 
 engine = pyttsx3.init('sapi5')
 
-client = wolframalpha.Client('54WKH5-86QY224A93')
+client = wolframalpha.Client('client ID')
 
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[len(voices) - 1].id)
@@ -92,8 +92,8 @@ if __name__ == '__main__':
                     server = smtplib.SMTP('smtp.gmail.com', 587)
                     server.ehlo()
                     server.starttls()
-                    server.login("ofirlly65@gmail.com", 'o168010200')
-                    server.sendmail('ofirlly65@gmail.com','ofirlly65@gmail.com',content)
+                    server.login("username", 'userpassword')
+                    server.sendmail('fromemail','toemail',content)
                     server.quit()
                     speak('Email sent!')
                 except:
